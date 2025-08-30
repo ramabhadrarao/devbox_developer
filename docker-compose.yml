@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  # One container per user (generate via script or duplicate block)
+  devbox_dev1:
+    build:
+      context: .
+      dockerfile: Dockerfile.devbox
+      args:
+        USER: dev1
+        PASSWORD: ${DEVBOX_PASSWORD_dev1}
+    container_name: devbox_dev1
+    networks:
+      - devnet
+    expose:
+      - "3389"
+    volumes:
+      - ./logs/dev1:/var/log
+    restart: unless-stopped
+
+  devbox_dev2:
+    build:
+      context: .
+      dockerfile: Dockerfile.devbox
+      args:
+        USER: dev2
+        PASSWORD: ${DEVBOX_PASSWORD_dev2}
+    container_name: devbox_dev2
+    networks:
+      - devnet
+    expose:
+      - "3389"
+    volumes:
+      - ./logs/dev2:/var/log
+    restart: unless-stopped
+
+networks:
+  devnet:
+    external: true

@@ -1,0 +1,71 @@
+[20250830-06:24:57] [INFO ] starting xrdp with pid 1
+[20250830-06:24:57] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-06:24:57] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-06:24:57] [INFO ] xrdp_listen_pp done
+[20250830-06:37:02] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-06:37:03] [INFO ] starting xrdp with pid 1
+[20250830-06:37:03] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-06:37:03] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-06:37:03] [INFO ] xrdp_listen_pp done
+[20250830-06:41:39] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-06:41:48] [INFO ] starting xrdp with pid 1
+[20250830-06:41:48] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-06:41:48] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-06:41:48] [INFO ] xrdp_listen_pp done
+[20250830-07:04:05] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:04:05] [INFO ] starting xrdp with pid 1
+[20250830-07:04:05] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:04:05] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:04:05] [INFO ] xrdp_listen_pp done
+[20250830-07:04:38] [INFO ] starting xrdp with pid 31
+[20250830-07:04:38] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:04:38] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:04:38] [ERROR] g_tcp_bind(10, 3389) failed bind IPv6 (errno=98) and IPv4 (errno=22).
+[20250830-07:04:38] [ERROR] trans_listen_address failed
+[20250830-07:04:38] [ERROR] xrdp_listen_main_loop: xrdp_listen_get_port failed
+[20250830-07:05:09] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:05:10] [INFO ] starting xrdp with pid 1
+[20250830-07:05:10] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:05:10] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:05:10] [INFO ] xrdp_listen_pp done
+[20250830-07:05:56] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:05:56] [INFO ] starting xrdp with pid 1
+[20250830-07:05:56] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:05:56] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:05:56] [INFO ] xrdp_listen_pp done
+[20250830-07:07:43] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:07:43] [INFO ] starting xrdp with pid 1
+[20250830-07:07:43] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:07:43] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:07:43] [INFO ] xrdp_listen_pp done
+[20250830-07:12:44] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:12:45] [INFO ] starting xrdp with pid 1
+[20250830-07:12:45] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:12:45] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:12:45] [INFO ] xrdp_listen_pp done
+[20250830-07:20:33] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:20:33] [INFO ] starting xrdp with pid 1
+[20250830-07:20:33] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:20:33] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:20:33] [INFO ] xrdp_listen_pp done
+[20250830-07:24:17] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:24:24] [INFO ] starting xrdp with pid 1
+[20250830-07:24:24] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:24:24] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:24:24] [INFO ] xrdp_listen_pp done
+[20250830-07:27:34] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:27:38] [INFO ] starting xrdp with pid 1
+[20250830-07:27:38] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:27:38] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:27:38] [INFO ] xrdp_listen_pp done
+[20250830-07:38:16] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:38:22] [INFO ] starting xrdp with pid 1
+[20250830-07:38:22] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:38:22] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:38:22] [INFO ] xrdp_listen_pp done
+[20250830-07:53:32] [INFO ] Received termination signal, stopping the server accept new connections thread
+[20250830-07:53:32] [INFO ] starting xrdp with pid 1
+[20250830-07:53:32] [INFO ] address [0.0.0.0] port [3389] mode 1
+[20250830-07:53:32] [INFO ] listening to port 3389 on 0.0.0.0
+[20250830-07:53:32] [INFO ] xrdp_listen_pp done
+[20250830-07:56:13] [INFO ] Received termination signal, stopping the server accept new connections thread

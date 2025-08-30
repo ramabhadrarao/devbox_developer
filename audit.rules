@@ -1,0 +1,10 @@
+# Log all command executions
+-a exit,always -F arch=b64 -S execve -k command_exec
+-a exit,always -F arch=b32 -S execve -k command_exec
+
+# Watch home directory
+-w /home/dev/ -p rwxa -k home_changes
+
+# Watch network usage
+-w /etc/hosts -p wa -k network_config
+-w /etc/resolv.conf -p wa -k network_config

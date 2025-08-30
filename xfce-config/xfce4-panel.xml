@@ -1,0 +1,26 @@
+<channel name="xfce4-panel" version="1.0">
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+  </property>
+  <property name="panels/panel-1" type="empty">
+    <property name="position" type="string" value="p=6;x=0;y=0"/>
+    <property name="plugin-ids" type="array">
+      <value type="int" value="1"/> <!-- Whisker Menu -->
+      <value type="int" value="2"/> <!-- Separator -->
+      <value type="int" value="3"/> <!-- Window Buttons -->
+      <value type="int" value="4"/> <!-- Notification Area -->
+      <value type="int" value="5"/> <!-- Clock -->
+    </property>
+  </property>
+
+  <!-- Whisker Menu: Only Terminal, Chrome, Codium, Logout -->
+  <property name="plugins/plugin-1" type="string" value="whiskermenu">
+    <property name="show-all-applications" type="bool" value="false"/>
+    <property name="favorites" type="array">
+      <value type="string" value="xfce4-terminal.desktop"/>
+      <value type="string" value="google-chrome.desktop"/>
+      <value type="string" value="codium.desktop"/>
+      <value type="string" value="xfce4-session-logout.desktop"/>
+    </property>
+  </property>
+</channel>

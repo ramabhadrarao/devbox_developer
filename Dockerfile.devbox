@@ -1,0 +1,113 @@
+FROM ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ARG USER=dev
+ARG PASSWORD=devpass
+
+# ---------------------------
+# 1. System + XFCE desktop + databases
+# ---------------------------
+RUN apt-get update && apt-get install -y wget gnupg && \
+    apt-get install -y --no-install-recommends \
+      xfce4 xfce4-goodies xorg dbus-x11 \
+      xrdp \
+      curl wget git nano sudo \
+      acct net-tools \
+      sqlite3 mysql-server && \
+    # Add MongoDB official repo (Jammy since Noble not supported yet)
+    wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc | gpg --dearmor -o /usr/share/keyrings/mongodb.gpg && \
+    echo "deb [ arch=amd64 signed-by=/usr/share/keyrings/mongodb.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" \
+      > /etc/apt/sources.list.d/mongodb-org.list && \
+    apt-get update && \
+    apt-get install -y mongodb-org && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+# ---------------------------
+# Install supervisor for service management
+# ---------------------------
+# ---------------------------
+# Install supervisor for service management
+# ---------------------------
+# Install supervisor for service management
+RUN apt-get update && apt-get install -y supervisor && \
+    mkdir -p /var/log/supervisor /var/run && \
+    mkdir -p /etc/supervisor/conf.d
+
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# ---------------------------
+# 2. Dev Tools
+# ---------------------------
+RUN apt-get update && \
+    apt-get install -y nodejs npm python3 python3-pip openjdk-17-jdk && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# ---------------------------
+# 3. Chrome (locked with policy)
+# ---------------------------
+RUN curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+    sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" \
+    > /etc/apt/sources.list.d/google-chrome.list' && \
+    apt-get update && \
+    apt-get install -y google-chrome-stable && \
+    mkdir -p /etc/opt/chrome/policies/managed
+
+COPY chrome-policy.json /etc/opt/chrome/policies/managed/chrome-policy.json
+
+# ---------------------------
+# 4. VSCodium
+# ---------------------------
+RUN wget -qO- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor -o /usr/share/keyrings/vscodium.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/debs vscodium main" \
+    > /etc/apt/sources.list.d/vscodium.list && \
+    apt-get update && \
+    apt-get install -y codium
+
+# Copy extensions into container and install
+COPY codium-extensions/ /opt/codium-extensions/
+RUN for ext in /opt/codium-extensions/*.vsix; do \
+      codium --install-extension $ext || true; \
+    done
+
+# Disable marketplace / remote in VSCodium
+RUN mkdir -p /home/$USER/.config/VSCodium/User && \
+    echo '{ \
+      "extensionsGallery": {}, \
+      "remote.SSH.showLoginTerminal": false, \
+      "remote.SSH.enable": false, \
+      "remote.WSL.enable": false \
+    }' > /home/$USER/.config/VSCodium/User/settings.json
+
+# ---------------------------
+# 5. Create locked-down dev user
+# ---------------------------
+RUN useradd -ms /bin/bash $USER && echo "$USER:$PASSWORD" | chpasswd && \
+    (getent group sudo | grep -q "\\b$USER\\b" && deluser $USER sudo || true)
+
+# Expose user info inside container (important for start-devbox.sh)
+ENV DEVBOX_USER=$USER
+ENV DEVBOX_PASS=$PASSWORD
+
+USER $USER
+WORKDIR /home/$USER
+
+# XFCE Config + Wallpaper
+COPY xfce-config/ /home/$USER/.config/xfce4/
+COPY wallpaper.jpg /home/$USER/Pictures/wallpaper.jpg
+
+# ---------------------------
+# 6. Security configs
+# ---------------------------
+USER root
+COPY start-devbox.sh /usr/local/bin/start-devbox.sh
+RUN chmod +x /usr/local/bin/start-devbox.sh
+
+# ---------------------------
+# 7. RDP for Guacamole
+# ---------------------------
+# EXPOSE 3389
+EXPOSE 3389
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+
+ENTRYPOINT ["/usr/local/bin/start-devbox.sh"]
+# CMD ["/usr/sbin/xrdp", "-nodaemon"]

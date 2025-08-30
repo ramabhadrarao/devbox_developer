@@ -1,0 +1,32 @@
+*filter
+# Default policies
+:INPUT ACCEPT [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT DROP [0:0]
+
+# Allow localhost
+-A OUTPUT -o lo -j ACCEPT
+
+# Allow DNS
+-A OUTPUT -p udp --dport 53 -j ACCEPT
+-A OUTPUT -p tcp --dport 53 -j ACCEPT
+
+# Allow HTTP/HTTPS to specific repos
+# --- Gitea (adjust to your gitea host/IP if needed)
+-A OUTPUT -p tcp -d gitea --dport 3000 -j ACCEPT
+
+# --- npm
+-A OUTPUT -p tcp -m multiport --dports 80,443 -d registry.npmjs.org -j ACCEPT
+-A OUTPUT -p tcp -m multiport --dports 80,443 -d npmjs.com -j ACCEPT
+
+# --- PyPI
+-A OUTPUT -p tcp -m multiport --dports 80,443 -d pypi.org -j ACCEPT
+-A OUTPUT -p tcp -m multiport --dports 80,443 -d files.pythonhosted.org -j ACCEPT
+
+# --- Maven
+-A OUTPUT -p tcp -m multiport --dports 80,443 -d repo.maven.apache.org -j ACCEPT
+
+# Drop everything else
+-A OUTPUT -j DROP
+
+COMMIT
