@@ -1004,3 +1004,288 @@ This may indicate that pixbuf loaders or the mime database could not be found.
 (xfce4-mime-helper:118): dbind-WARNING **: 10:40:36.920: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
 
 (xfce4-terminal:119): dbind-WARNING **: 10:40:36.950: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfdesktop:91): Gtk-CRITICAL **: 10:41:26.159: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(exo-open:132): dbind-WARNING **: 10:41:31.392: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-mime-helper:134): dbind-WARNING **: 10:41:31.413: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-terminal:135): dbind-WARNING **: 10:41:31.440: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfdesktop:91): Gtk-CRITICAL **: 10:41:36.004: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(exo-open:143): dbind-WARNING **: 10:41:38.943: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-mime-helper:145): dbind-WARNING **: 10:41:38.963: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-terminal:146): dbind-WARNING **: 10:41:38.989: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfdesktop:91): Gtk-CRITICAL **: 10:41:41.429: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+[153:176:0830/104148.368770:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[153:179:0830/104148.431865:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[153:179:0830/104148.432583:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[153:225:0830/104148.620635:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[153:225:0830/104148.620676:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[153:225:0830/104148.620903:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[153:225:0830/104148.621866:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[153:225:0830/104148.621899:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[153:153:0830/104148.633564:ERROR:components/url_matcher/url_util.cc:453] Invalid pattern 178.16.139.214:*
+[153:153:0830/104148.633623:ERROR:components/url_matcher/url_util.cc:453] Invalid pattern 127.0.0.1:*
+[188:188:0830/104148.709322:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[0830/104150.241113:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0830/104150.241188:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+[0830/104150.247368:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /home/dev1/.config/google-chrome/Crash Reports/attachments/e4fa73ca-f7d7-4cc9-aa02-d6006e57347d: No such file or directory (2)
+[153:153:0830/104150.248135:ERROR:mojo/public/cpp/bindings/lib/interface_endpoint_client.cc:732] Message 0 rejected by interface blink.mojom.WidgetHost
+[153:177:0830/104151.546869:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+[153:177:0830/104151.547243:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1756550516.027521     172 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+[153:177:0830/104215.843924:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[153:177:0830/104257.021516:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+
+(xfdesktop:91): Gtk-CRITICAL **: 10:43:23.988: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(exo-open:779): dbind-WARNING **: 10:43:26.696: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-mime-helper:781): dbind-WARNING **: 10:43:26.718: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-terminal:782): dbind-WARNING **: 10:43:26.748: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfdesktop:91): Gtk-CRITICAL **: 10:44:22.484: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(xfce4-session-logout:796): dbind-WARNING **: 10:44:25.945: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+rdpkeybBell:
+rdpkeybBell:
+
+(xfce4-session:28): xfce4-session-WARNING **: 10:44:25.977: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(xfce4-session:28): xfce4-session-WARNING **: 10:44:25.980: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(xfce4-session:28): xfce4-session-WARNING **: 10:44:25.983: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(xfce4-session:28): Gtk-WARNING **: 10:44:25.995: Could not load a pixbuf from /org/gtk/libgtk/theme/Adwaita/assets/check-symbolic.svg.
+This may indicate that pixbuf loaders or the mime database could not be found.
+rdpmouseControl: what 2
+rdpmouseDeviceOff:
+rdpkeybControl: what 2
+rdpkeybDeviceOff:
+xorgxrdpDamageDestroy:
+rdpkeybControl: what 3
+rdpkeybUnInit: drv 0x6423eb7ba920 info 0x6423eba64b80, flags 0x0
+rdpUnregisterInputCallback: proc 0x725d35d50d60
+rdpmouseControl: what 3
+rdpmouseUnInit: drv 0x6423eb7b9110 info 0x6423eba61aa0, flags 0x0
+rdpUnregisterInputCallback: proc 0x725d3620d3a0
+rdpCloseScreen:
+xorgxrdpDownDown:
+xorgxrdpDownDown: 1
+rdpClientConDeinit:
+rdpClientConDeinit: disconnecting clientCon
+rdpClientConDisconnect:
+rdpRemoveClientConFromDev: removing clientCon 0x6423ebabb510
+rdpClientConDeinit: deleting file /run/xrdp/sockdir/xrdp_display_10
+rdpClientConDeinit: deleting file /run/xrdp/sockdir/xrdp_disconnect_display_10
+(II) Server terminated successfully (0). Closing log file.
+
+X.Org X Server 1.21.1.11
+X Protocol Version 11, Revision 0
+Current Operating System: Linux devbox-dev1 6.8.0-79-generic #79-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 14:42:46 UTC 2025 x86_64
+Kernel command line: BOOT_IMAGE=/vmlinuz-6.8.0-79-generic root=UUID=d36f7414-beb7-45e0-900e-9ab79cdbcb2d ro console=tty0 console=ttyS0,115200 earlyprintk=ttyS0,115200 consoleblank=0 memhp_default_state=online console=tty1 console=ttyS0
+xorg-server 2:21.1.12-1ubuntu1.4 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.42.2
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(++) Log file: ".xorgxrdp.10.log", Time: Sat Aug 30 10:49:27 2025
+(++) Using config file: "/etc/X11/xrdp/xorg.conf"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+xorgxrdpSetup:
+xrdpdevSetup:
+rdpmousePlug:
+rdpkeybPlug:
+rdpIdentify:
+rdpDriverFunc: op 10
+rdpProbe:
+rdpProbe: found DRMDevice xorg.conf value [/dev/dri/renderD128]
+rdpProbe: found DRI3 xorg.conf value [1]
+rdpPreInit:
+rdpPreInit: /dev/dri/renderD128 open failed
+rdpScreenInit: virtualX 800 virtualY 600 rgbBits 8 depth 24
+rdpScreenInit: pfbMemory bytes 1920000
+rdpScreenInit: pfbMemory 0x700186fa6010
+rdpSimdInit: assigning yuv functions
+rdpSimdInit: cpuid ax 1 cx 0 return ax 0x00a10f11 bx 0x01040800 cx 0xfffa3203 dx 0x178bfbff
+rdpSimdInit: sse2 amd64 yuv functions assigned
+rdpClientConInit: disconnect idle session after [0] sec
+rdpClientConInit: kill disconnected [0] timeout [0] sec
+rdpClientConInit: do_touchpad_scroll_hack [0]
+rdpXvInit: depth 24
+rdpScreenInit: out
+rdpCreateScreenResources:
+rdpmousePreInit: drv 0x6329b5420110 info 0x6329b56c8aa0, flags 0x0
+rdpmouseControl: what 0
+rdpmouseDeviceInit:
+rdpmouseCtrl:
+rdpRegisterInputCallback: type 1 proc 0x7001876393a0
+rdpmouseControl: what 1
+rdpmouseDeviceOn:
+rdpkeybPreInit: drv 0x6329b5421920 info 0x6329b56cbb80, flags 0x0
+rdpkeybControl: what 0
+rdpkeybDeviceInit:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpRegisterInputCallback: type 0 proc 0x70018717cd60
+rdpkeybControl: what 1
+rdpkeybDeviceOn:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpDeferredRandR:
+rdpResizeSession: width 1024 height 768
+  calling RRScreenSizeSet
+rdpRRScreenSetSize: width 1024 height 768 mmWidth 271 mmHeight 203
+rdpRRGetInfo:
+  screen resized to 1024x768
+  RRScreenSizeSet ok 1
+rdpResizeSession: width 1524 height 720
+  calling RRScreenSizeSet
+rdpRRScreenSetSize: width 1524 height 720 mmWidth 403 mmHeight 191
+rdpRRGetInfo:
+  screen resized to 1524x720
+  RRScreenSizeSet ok 1
+rdpClientConGotConnection:
+rdpClientConGotConnection: g_sck_accept ok new_sck 9
+rdpClientConGetConnection: idle_disconnect_timeout set to non-positive value, idle timer turned off
+rdpAddClientConToDev: adding first clientCon 0x6329b5722510
+rdpClientConProcessMsgVersion: version 0 0 0 1
+rdpClientConProcessScreenSizeMsg: set width 1524 height 720 bpp 24
+rdpClientConAllocateSharedMemory: shmemid 39 shmemptr 0x700185ede000 bytes 4389120
+rdpClientConProcessMsgClientInput: invalidate x 0 y 0 cx 1524 cy 720
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpClientConProcessMsgClientInfo:
+  got client info bytes 7072
+  jpeg support 0
+  offscreen support 0
+  offscreen size 0
+  offscreen entries 0
+  client can not do offscreen to offscreen blits
+  client can do new(color) cursor
+  client can not do multimon
+rdpRRSetRdpOutputs: numCrtcs 0 numOutputs 0 monitorCount 0
+rdpRRSetRdpOutputs: add output 0 left 0 top 0 width 1524 height 720
+rdpLoadLayout: keylayout 0x00000409 variant  display 10
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+fuse: device not found, try 'modprobe fuse' first
+
+(xfce4-session:817): dbind-WARNING **: 10:49:28.331: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+_IceTransmkdir: Owner of /tmp/.ICE-unix should be set to root
+
+(xfce4-session:817): xfce4-session-WARNING **: 10:49:28.349: No SSH authentication agent found
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+
+(xfwm4:854): dbind-WARNING **: 10:49:28.381: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfwm4:854): xfwm4-WARNING **: 10:49:28.510: Unsupported GL renderer (llvmpipe (LLVM 19.1.1, 256 bits)).
+
+(xfsettingsd:868): dbind-WARNING **: 10:49:28.543: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+rdpRRGetInfo:
+
+(xfsettingsd:868): libupower-glib-WARNING **: 10:49:28.549: Couldn't connect to proxy: Could not connect: No such file or directory
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+
+(xfce4-panel:872): dbind-WARNING **: 10:49:28.600: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(Thunar:877): dbind-WARNING **: 10:49:28.629: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+
+(xfdesktop:883): dbind-WARNING **: 10:49:28.667: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+** (xfdesktop:883): WARNING **: 10:49:28.773: Thumbnailer failed calling GetFlavors
+
+(xfce4-terminal:887): dbind-WARNING **: 10:49:28.790: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+** (xfdesktop:883): WARNING **: 10:49:28.802: Failed to get system bus: Could not connect: No such file or directory
+
+(xfsettingsd:894): dbind-WARNING **: 10:49:28.852: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-notifyd:895): dbind-WARNING **: 10:49:28.855: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfdesktop:883): Gtk-CRITICAL **: 10:49:49.473: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+[912:934:0830/104953.524672:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[912:937:0830/104953.574447:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[912:937:0830/104953.574522:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[912:912:0830/104953.699632:ERROR:components/url_matcher/url_util.cc:453] Invalid pattern 178.16.139.214:*
+[912:912:0830/104953.699652:ERROR:components/url_matcher/url_util.cc:453] Invalid pattern 127.0.0.1:*
+[948:948:0830/104953.732458:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[912:1026:0830/104953.806724:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[912:1026:0830/104953.806765:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[912:1026:0830/104953.806796:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[912:1026:0830/104953.806824:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[912:1026:0830/104953.806839:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[1018:1018:0830/104954.001381:ERROR:components/viz/service/main/viz_main_impl.cc:189] Exiting GPU process due to errors during initialization
+[1016:1024:0830/104954.098198:ERROR:gpu/ipc/client/command_buffer_proxy_impl.cc:126] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+[912:912:0830/104954.143101:ERROR:mojo/public/cpp/bindings/lib/interface_endpoint_client.cc:732] Message 6 rejected by interface blink.mojom.WidgetHost
+[912:912:0830/104954.143131:ERROR:mojo/public/cpp/bindings/lib/interface_endpoint_client.cc:732] Message 7 rejected by interface blink.mojom.WidgetHost
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1756550997.150071     931 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+[912:935:0830/104957.199947:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[912:935:0830/105018.570205:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[912:935:0830/105118.223641:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[912:935:0830/105244.536272:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1756551173.628562    1116 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+Warning: vkCreateInstance: Found no drivers!
+Warning: vkCreateInstance failed with VK_ERROR_INCOMPATIBLE_DRIVER
+    at CheckVkSuccessImpl (../../third_party/dawn/src/dawn/native/vulkan/VulkanError.cpp:106)
+
+[912:912:0830/105253.637357:ERROR:services/on_device_model/public/cpp/service_client.cc:36] Unexpected on_device_model service disconnect: 
+rdpClientConRecv: g_sck_recv failed(returned 0)
+rdpClientConRecvMsg: error
+rdpClientConCheck: rdpClientConGotData failed
+rdpClientConDisconnect:
+rdpRemoveClientConFromDev: removing clientCon 0x6329b5722510
+[912:935:0830/105545.798675:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[912:935:0830/110341.269558:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT

@@ -134,3 +134,44 @@
 2025-08-30 10:39:38,131 INFO success: xrdp-sesman entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2025-08-30 10:39:38,132 INFO success: xrdp entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2025-08-30 10:40:42,955 INFO reaped unknown pid 118 (exit status 0)
+2025-08-30 10:41:32,442 INFO reaped unknown pid 134 (exit status 0)
+2025-08-30 10:41:39,990 INFO reaped unknown pid 145 (exit status 0)
+2025-08-30 10:41:51,249 INFO reaped unknown pid 314 (exit status 0)
+2025-08-30 10:41:51,249 INFO reaped unknown pid 315 (exit status 0)
+2025-08-30 10:43:23,988 INFO reaped unknown pid 161 (exit status 0)
+2025-08-30 10:43:23,989 INFO reaped unknown pid 163 (exit status 0)
+2025-08-30 10:43:23,989 INFO reaped unknown pid 158 (exit status 0)
+2025-08-30 10:43:23,989 INFO reaped unknown pid 159 (exit status 0)
+2025-08-30 10:43:23,989 INFO reaped unknown pid 168 (exit status 0)
+2025-08-30 10:43:23,989 INFO reaped unknown pid 169 (exit status 0)
+2025-08-30 10:43:23,989 INFO reaped unknown pid 260 (exit status 0)
+2025-08-30 10:43:27,750 INFO reaped unknown pid 781 (exit status 0)
+2025-08-30 10:44:27,793 INFO reaped unknown pid 65 (exit status 0)
+2025-08-30 10:44:27,793 INFO reaped unknown pid 119 (exit status 0)
+2025-08-30 10:44:27,793 INFO reaped unknown pid 125 (terminated by SIGHUP)
+2025-08-30 10:44:27,793 INFO reaped unknown pid 66 (exit status 0)
+2025-08-30 10:44:27,793 INFO reaped unknown pid 71 (exit status 0)
+2025-08-30 10:44:27,793 INFO reaped unknown pid 75 (exit status 0)
+2025-08-30 10:44:27,793 INFO reaped unknown pid 80 (exit status 0)
+2025-08-30 10:44:27,793 INFO reaped unknown pid 91 (exit status 0)
+2025-08-30 10:44:27,796 INFO reaped unknown pid 96 (exit status 1)
+2025-08-30 10:44:28,798 INFO reaped unknown pid 49 (exit status 0)
+2025-08-30 10:44:28,799 INFO reaped unknown pid 54 (exit status 0)
+2025-08-30 10:44:30,800 INFO reaped unknown pid 48 (exit status 0)
+2025-08-30 10:49:57,145 INFO reaped unknown pid 1081 (exit status 0)
+2025-08-30 10:49:57,145 INFO reaped unknown pid 1082 (exit status 0)
+2025-08-30 10:54:30,337 INFO reaped unknown pid 842 (exit status 0)
+2025-08-30 11:04:29,324 INFO reaped unknown pid 1135 (exit status 0)
+2025-08-30 11:14:30,020 INFO reaped unknown pid 1172 (exit status 0)
+2025-08-30 11:15:13,067 WARN received SIGTERM indicating exit request
+2025-08-30 11:15:13,067 INFO waiting for xrdp-sesman, xrdp to die
+2025-08-30 11:15:13,070 INFO stopped: xrdp (exit status 0)
+2025-08-30 11:15:14,072 INFO stopped: xrdp-sesman (exit status 0)
+2025-08-30 11:15:23,318 INFO Set uid to user 0 succeeded
+2025-08-30 11:15:23,323 INFO RPC interface 'supervisor' initialized
+2025-08-30 11:15:23,323 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-08-30 11:15:23,323 INFO supervisord started with pid 1
+2025-08-30 11:15:24,325 INFO spawned: 'xrdp-sesman' with pid 24
+2025-08-30 11:15:24,327 INFO spawned: 'xrdp' with pid 25
+2025-08-30 11:15:25,328 INFO success: xrdp-sesman entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-30 11:15:25,328 INFO success: xrdp entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
