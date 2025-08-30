@@ -5,12 +5,13 @@ ARG USER=dev
 ARG PASSWORD=devpass
 
 # ---------------------------
-# 1. System + XFCE desktop + databases
+# 1. System + XFCE desktop
 # ---------------------------
 RUN apt-get update && apt-get install -y wget gnupg && \
     apt-get install -y --no-install-recommends \
       xfce4 xfce4-goodies xorg dbus-x11 \
       xrdp \
+      xorgxrdp \
       curl wget git nano sudo \
       acct net-tools \
       sqlite3 mysql-server && \
@@ -21,16 +22,37 @@ RUN apt-get update && apt-get install -y wget gnupg && \
     apt-get update && \
     apt-get install -y mongodb-org && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# ---------------------------
+# Configure XRDP
+# ---------------------------
+RUN sed -i 's/^port=3389/port=3389/' /etc/xrdp/xrdp.ini && \
+    sed -i 's/^security_layer=negotiate/security_layer=negotiate/' /etc/xrdp/xrdp.ini && \
+    sed -i 's/^crypt_level=high/crypt_level=low/' /etc/xrdp/xrdp.ini && \
+    sed -i 's/^bitmap_compression=true/bitmap_compression=true/' /etc/xrdp/xrdp.ini && \
+    sed -i 's/^max_bpp=32/max_bpp=24/' /etc/xrdp/xrdp.ini && \
+    echo "exec startxfce4" > /etc/xrdp/startwm.sh && \
+    chmod +x /etc/xrdp/startwm.sh
+
+# Enable all users to use XRDP
+RUN sed -i 's/TerminalServerUsers=tsusers/# TerminalServerUsers=tsusers/' /etc/xrdp/sesman.ini && \
+    sed -i 's/TerminalServerAdmins=tsadmins/# TerminalServerAdmins=tsadmins/' /etc/xrdp/sesman.ini
+
 # ---------------------------
 # Install supervisor for service management
 # ---------------------------
-# ---------------------------
-# Install supervisor for service management
-# ---------------------------
-# Install supervisor for service management
 RUN apt-get update && apt-get install -y supervisor && \
-    mkdir -p /var/log/supervisor /var/run && \
-    mkdir -p /etc/supervisor/conf.d
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Create all necessary directories
+RUN mkdir -p /var/log/supervisor && \
+    mkdir -p /var/run/supervisor && \
+    mkdir -p /var/run/xrdp && \
+    mkdir -p /var/log/xrdp && \
+    mkdir -p /var/log/account && \
+    mkdir -p /etc/supervisor/conf.d && \
+    chmod 755 /var/log/supervisor /var/run/supervisor && \
+    chmod 1777 /var/run/xrdp
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
@@ -61,13 +83,111 @@ RUN wget -qO- https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pu
     echo "deb [signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/debs vscodium main" \
     > /etc/apt/sources.list.d/vscodium.list && \
     apt-get update && \
-    apt-get install -y codium
+    apt-get install -y codium && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Copy extensions into container and install
-COPY codium-extensions/ /opt/codium-extensions/
-RUN for ext in /opt/codium-extensions/*.vsix; do \
-      codium --install-extension $ext || true; \
-    done
+# ---------------------------
+# 5. Override Desktop Entries with Sandbox Flags
+# ---------------------------
+# Create custom desktop entries with sandbox flags
+RUN echo '[Desktop Entry]\n\
+Version=1.0\n\
+Name=Google Chrome\n\
+GenericName=Web Browser\n\
+Comment=Access the Internet\n\
+Exec=/usr/bin/google-chrome-stable --no-sandbox --disable-gpu-sandbox %U\n\
+Terminal=false\n\
+Icon=google-chrome\n\
+Type=Application\n\
+Categories=Network;WebBrowser;\n\
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;\n\
+Actions=new-window;new-private-window;\n\
+\n\
+[Desktop Action new-window]\n\
+Name=New Window\n\
+Exec=/usr/bin/google-chrome-stable --no-sandbox --disable-gpu-sandbox --new-window\n\
+\n\
+[Desktop Action new-private-window]\n\
+Name=New Incognito Window\n\
+Exec=/usr/bin/google-chrome-stable --no-sandbox --disable-gpu-sandbox --incognito' \
+> /usr/share/applications/google-chrome.desktop
+
+RUN echo '[Desktop Entry]\n\
+Name=VSCodium\n\
+Comment=Code Editing. Redefined.\n\
+GenericName=Text Editor\n\
+Exec=/usr/bin/codium --no-sandbox --disable-gpu-sandbox --unity-launch %F\n\
+Icon=vscodium\n\
+Type=Application\n\
+StartupNotify=false\n\
+StartupWMClass=VSCodium\n\
+Categories=TextEditor;Development;IDE;\n\
+MimeType=text/plain;application/x-codium-workspace;\n\
+Actions=new-empty-window;\n\
+Keywords=vscode;codium;\n\
+\n\
+[Desktop Action new-empty-window]\n\
+Name=New Empty Window\n\
+Exec=/usr/bin/codium --no-sandbox --disable-gpu-sandbox --new-window %F\n\
+Icon=vscodium' \
+> /usr/share/applications/codium.desktop
+
+# ---------------------------
+# 6. Create locked-down dev user
+# ---------------------------
+RUN useradd -ms /bin/bash $USER && \
+    echo "$USER:$PASSWORD" | chpasswd && \
+    usermod -aG ssl-cert $USER && \
+    (getent group sudo | grep -q "\\b$USER\\b" && deluser $USER sudo || true)
+
+# Setup user's XFCE environment
+RUN mkdir -p /home/$USER/.config/xfce4 && \
+    mkdir -p /home/$USER/.config/xfce4/xfconf/xfce-perchannel-xml && \
+    mkdir -p /home/$USER/Pictures && \
+    mkdir -p /home/$USER/.local/share/applications && \
+    echo "startxfce4" > /home/$USER/.xsession && \
+    echo "startxfce4" > /home/$USER/.xinitrc && \
+    chmod 755 /home/$USER/.xsession /home/$USER/.xinitrc
+
+# Copy desktop entries to user's local applications
+RUN cp /usr/share/applications/google-chrome.desktop /home/$USER/.local/share/applications/ && \
+    cp /usr/share/applications/codium.desktop /home/$USER/.local/share/applications/
+
+# Copy wallpaper
+COPY wallpaper.jpg /home/$USER/Pictures/wallpaper.jpg
+
+# Setup XFCE wallpaper configuration
+RUN echo '<?xml version="1.0" encoding="UTF-8"?>\n\
+<channel name="xfce4-desktop" version="1.0">\n\
+  <property name="backdrop" type="empty">\n\
+    <property name="screen0" type="empty">\n\
+      <property name="monitor0" type="empty">\n\
+        <property name="workspace0" type="empty">\n\
+          <property name="color-style" type="int" value="0"/>\n\
+          <property name="image-style" type="int" value="5"/>\n\
+          <property name="last-image" type="string" value="/home/'$USER'/Pictures/wallpaper.jpg"/>\n\
+        </property>\n\
+      </property>\n\
+      <property name="monitorVNC-0" type="empty">\n\
+        <property name="workspace0" type="empty">\n\
+          <property name="color-style" type="int" value="0"/>\n\
+          <property name="image-style" type="int" value="5"/>\n\
+          <property name="last-image" type="string" value="/home/'$USER'/Pictures/wallpaper.jpg"/>\n\
+        </property>\n\
+      </property>\n\
+      <property name="monitorrdp0" type="empty">\n\
+        <property name="workspace0" type="empty">\n\
+          <property name="color-style" type="int" value="0"/>\n\
+          <property name="image-style" type="int" value="5"/>\n\
+          <property name="last-image" type="string" value="/home/'$USER'/Pictures/wallpaper.jpg"/>\n\
+        </property>\n\
+      </property>\n\
+    </property>\n\
+  </property>\n\
+</channel>' > /home/$USER/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+
+# Copy XFCE panel config if exists
+COPY xfce-config/xfce4-panel.xml /home/$USER/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml || true
 
 # Disable marketplace / remote in VSCodium
 RUN mkdir -p /home/$USER/.config/VSCodium/User && \
@@ -78,36 +198,33 @@ RUN mkdir -p /home/$USER/.config/VSCodium/User && \
       "remote.WSL.enable": false \
     }' > /home/$USER/.config/VSCodium/User/settings.json
 
-# ---------------------------
-# 5. Create locked-down dev user
-# ---------------------------
-RUN useradd -ms /bin/bash $USER && echo "$USER:$PASSWORD" | chpasswd && \
-    (getent group sudo | grep -q "\\b$USER\\b" && deluser $USER sudo || true)
+# Fix ownership of all user files
+RUN chown -R $USER:$USER /home/$USER
 
-# Expose user info inside container (important for start-devbox.sh)
+# Expose user info inside container
 ENV DEVBOX_USER=$USER
 ENV DEVBOX_PASS=$PASSWORD
 
-USER $USER
-WORKDIR /home/$USER
-
-# XFCE Config + Wallpaper
-COPY xfce-config/ /home/$USER/.config/xfce4/
-COPY wallpaper.jpg /home/$USER/Pictures/wallpaper.jpg
-
 # ---------------------------
-# 6. Security configs
+# 7. Security configs
 # ---------------------------
-USER root
 COPY start-devbox.sh /usr/local/bin/start-devbox.sh
 RUN chmod +x /usr/local/bin/start-devbox.sh
 
 # ---------------------------
-# 7. RDP for Guacamole
+# 8. Polkit fix for XFCE
 # ---------------------------
-# EXPOSE 3389
+RUN mkdir -p /etc/polkit-1/localauthority/50-local.d && \
+    echo '[Allow Colord for all users]' > /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla && \
+    echo 'Identity=unix-user:*' >> /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla && \
+    echo 'Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile' >> /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla && \
+    echo 'ResultAny=no' >> /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla && \
+    echo 'ResultInactive=no' >> /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla && \
+    echo 'ResultActive=yes' >> /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla
+
+# ---------------------------
+# 9. RDP for Guacamole
+# ---------------------------
 EXPOSE 3389
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 
 ENTRYPOINT ["/usr/local/bin/start-devbox.sh"]
-# CMD ["/usr/sbin/xrdp", "-nodaemon"]

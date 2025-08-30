@@ -1,0 +1,585 @@
+xauth:  file .Xauthority does not exist
+
+X.Org X Server 1.21.1.11
+X Protocol Version 11, Revision 0
+Current Operating System: Linux devbox-dev1 6.8.0-79-generic #79-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 14:42:46 UTC 2025 x86_64
+Kernel command line: BOOT_IMAGE=/vmlinuz-6.8.0-79-generic root=UUID=d36f7414-beb7-45e0-900e-9ab79cdbcb2d ro console=tty0 console=ttyS0,115200 earlyprintk=ttyS0,115200 consoleblank=0 memhp_default_state=online console=tty1 console=ttyS0
+xorg-server 2:21.1.12-1ubuntu1.4 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.42.2
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(++) Log file: ".xorgxrdp.10.log", Time: Sat Aug 30 09:23:42 2025
+(++) Using config file: "/etc/X11/xrdp/xorg.conf"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+xorgxrdpSetup:
+xrdpdevSetup:
+rdpmousePlug:
+rdpkeybPlug:
+rdpIdentify:
+rdpDriverFunc: op 10
+rdpProbe:
+rdpProbe: found DRMDevice xorg.conf value [/dev/dri/renderD128]
+rdpProbe: found DRI3 xorg.conf value [1]
+rdpPreInit:
+rdpPreInit: /dev/dri/renderD128 open failed
+rdpScreenInit: virtualX 800 virtualY 600 rgbBits 8 depth 24
+rdpScreenInit: pfbMemory bytes 1920000
+rdpScreenInit: pfbMemory 0x79d1773b1010
+rdpSimdInit: assigning yuv functions
+rdpSimdInit: cpuid ax 1 cx 0 return ax 0x00a10f11 bx 0x02040800 cx 0xfffa3203 dx 0x178bfbff
+rdpSimdInit: sse2 amd64 yuv functions assigned
+rdpClientConInit: disconnect idle session after [0] sec
+rdpClientConInit: kill disconnected [0] timeout [0] sec
+rdpClientConInit: do_touchpad_scroll_hack [0]
+rdpXvInit: depth 24
+rdpScreenInit: out
+rdpCreateScreenResources:
+rdpmousePreInit: drv 0x5ae744bc6110 info 0x5ae744e6eaa0, flags 0x0
+rdpmouseControl: what 0
+rdpmouseDeviceInit:
+rdpmouseCtrl:
+rdpRegisterInputCallback: type 1 proc 0x79d177a443a0
+rdpmouseControl: what 1
+rdpmouseDeviceOn:
+rdpkeybPreInit: drv 0x5ae744bc7920 info 0x5ae744e71b80, flags 0x0
+rdpkeybControl: what 0
+rdpkeybDeviceInit:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpRegisterInputCallback: type 0 proc 0x79d177587d60
+rdpkeybControl: what 1
+rdpkeybDeviceOn:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpDeferredRandR:
+rdpResizeSession: width 1024 height 768
+  calling RRScreenSizeSet
+rdpRRScreenSetSize: width 1024 height 768 mmWidth 271 mmHeight 203
+rdpRRGetInfo:
+  screen resized to 1024x768
+  RRScreenSizeSet ok 1
+rdpResizeSession: width 1520 height 718
+  calling RRScreenSizeSet
+rdpRRScreenSetSize: width 1520 height 718 mmWidth 402 mmHeight 190
+rdpRRGetInfo:
+  screen resized to 1520x718
+  RRScreenSizeSet ok 1
+rdpClientConGotConnection:
+rdpClientConGotConnection: g_sck_accept ok new_sck 9
+rdpClientConGetConnection: idle_disconnect_timeout set to non-positive value, idle timer turned off
+rdpAddClientConToDev: adding first clientCon 0x5ae744ec8510
+rdpClientConProcessMsgVersion: version 0 0 0 1
+rdpClientConProcessScreenSizeMsg: set width 1520 height 718 bpp 24
+rdpClientConAllocateSharedMemory: shmemid 0 shmemptr 0x79d1762f5000 bytes 4365440
+rdpClientConProcessMsgClientInput: invalidate x 0 y 0 cx 1520 cy 718
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpClientConProcessMsgClientInfo:
+  got client info bytes 7072
+  jpeg support 0
+  offscreen support 0
+  offscreen size 0
+  offscreen entries 0
+  client can not do offscreen to offscreen blits
+  client can do new(color) cursor
+  client can not do multimon
+rdpRRSetRdpOutputs: numCrtcs 0 numOutputs 0 monitorCount 0
+rdpRRSetRdpOutputs: add output 0 left 0 top 0 width 1520 height 718
+rdpLoadLayout: keylayout 0x00000409 variant  display 10
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+fuse: device not found, try 'modprobe fuse' first
+
+(xfce4-session:58): dbind-WARNING **: 09:23:42.589: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+_IceTransmkdir: ERROR: euid != 0,directory /tmp/.ICE-unix will not be created.
+
+(xfce4-session:58): xfce4-session-WARNING **: 09:23:42.612: No SSH authentication agent found
+gpg-agent[94]: directory '/home/dev1/.gnupg' created
+gpg-agent[94]: directory '/home/dev1/.gnupg/private-keys-v1.d' created
+gpg-agent[95]: gpg-agent (GnuPG) 2.4.4 started
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+
+(xfwm4:96): dbind-WARNING **: 09:23:42.650: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfwm4:96): xfwm4-WARNING **: 09:23:43.222: Another compositing manager is running on screen 0
+
+(xfsettingsd:101): dbind-WARNING **: 09:23:43.253: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+rdpRRGetInfo:
+
+(xfsettingsd:101): libupower-glib-WARNING **: 09:23:43.261: Couldn't connect to proxy: Could not connect: No such file or directory
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+
+(xfce4-panel:105): dbind-WARNING **: 09:23:43.329: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(migrate:111): dbind-WARNING **: 09:23:43.354: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(Thunar:110): dbind-WARNING **: 09:23:43.369: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+
+(xfdesktop:119): dbind-WARNING **: 09:23:43.415: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+** (xfdesktop:119): WARNING **: 09:23:43.538: Thumbnailer failed calling GetFlavors
+
+(xfdesktop:119): GLib-GObject-CRITICAL **: 09:23:43.538: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(xfsettingsd:124): dbind-WARNING **: 09:23:43.551: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-notifyd:125): dbind-WARNING **: 09:23:43.563: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+** (xfdesktop:119): WARNING **: 09:23:43.602: Failed to get system bus: Could not connect: No such file or directory
+xfce4-panel-Message: 09:23:43.631: Plugin "(null)-7" was not found and has been removed from the configuration
+xfce4-panel-Message: 09:23:43.634: Plugin "power-manager-plugin-9" was not found and has been removed from the configuration
+libclock-Message: 09:23:43.662: could not get proxy for org.freedesktop.login1
+
+(xfce4-panel:105): libclock-WARNING **: 09:23:43.662: could not instantiate a sleep monitor
+
+(wrapper-2.0:138): dbind-WARNING **: 09:23:43.668: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(wrapper-2.0:139): dbind-WARNING **: 09:23:43.670: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(wrapper-2.0:140): dbind-WARNING **: 09:23:43.673: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(wrapper-2.0:150): dbind-WARNING **: 09:23:43.736: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(wrapper-2.0:140): xfce4-notification-plugin-WARNING **: 09:23:43.918: Failed to look up notification icon
+
+(wrapper-2.0:140): xfce4-notification-plugin-WARNING **: 09:23:43.937: Failed to look up notification icon
+
+(wrapper-2.0:140): xfce4-notification-plugin-WARNING **: 09:23:43.938: Failed to look up notification icon
+
+(xfce4-session:58): xfce4-session-WARNING **: 09:23:43.946: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+** (wrapper-2.0:139): WARNING **: 09:23:43.946: Binding 'XF86AudioLowerVolume' failed!
+
+** (wrapper-2.0:139): WARNING **: 09:23:43.946: Binding 'XF86AudioRaiseVolume' failed!
+
+** (wrapper-2.0:139): WARNING **: 09:23:43.946: Binding 'XF86AudioMute' failed!
+
+** (wrapper-2.0:139): WARNING **: 09:23:43.946: Binding 'XF86AudioMicMute' failed!
+
+(wrapper-2.0:139): pulseaudio-plugin-WARNING **: 09:23:43.946: Could not have grabbed volume control keys. Is another volume control application (xfce4-volumed) running?
+
+** (wrapper-2.0:139): WARNING **: 09:23:43.946: Binding 'XF86AudioPlay' failed!
+
+** (wrapper-2.0:139): WARNING **: 09:23:43.946: Binding 'XF86AudioStop' failed!
+
+** (wrapper-2.0:139): WARNING **: 09:23:43.947: Binding 'XF86AudioPrev' failed!
+
+** (wrapper-2.0:139): WARNING **: 09:23:43.947: Binding 'XF86AudioNext' failed!
+
+(wrapper-2.0:139): pulseaudio-plugin-WARNING **: 09:23:43.947: Could not have grabbed multimedia control keys.
+
+(xfce4-session:58): xfce4-session-WARNING **: 09:23:43.948: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(xfce4-session:58): xfce4-session-WARNING **: 09:23:43.953: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(wrapper-2.0:140): xfce4-notification-plugin-WARNING **: 09:23:43.959: Failed to look up notification icon
+
+(xfdesktop:119): Gtk-CRITICAL **: 09:23:55.118: gtk_widget_set_visible: assertion 'GTK_IS_WIDGET (widget)' failed
+Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno = Operation not permitted
+[164:0830/092407.332053:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:211] Check failed: . : Invalid argument (22)
+Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno = Operation not permitted
+[168:168:0830/092417.634918:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:211] Check failed: . : Operation not permitted (1)
+[0830/092417.646199:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0830/092417.646264:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+
+(exo-open:186): dbind-WARNING **: 09:24:20.862: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-mime-helper:188): dbind-WARNING **: 09:24:20.883: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-terminal:189): dbind-WARNING **: 09:24:20.916: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-terminal:189): Gtk-WARNING **: 09:25:26.090: Could not load a pixbuf from /org/gtk/libgtk/theme/Adwaita/assets/check-symbolic.svg.
+This may indicate that pixbuf loaders or the mime database could not be found.
+
+(xfce4-about:244): dbind-WARNING **: 09:28:06.949: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+xfce4-about-Message: 09:28:07.051: No vendor information found in "/usr/share/xfce4/vendorinfo".
+
+(exo-open:255): dbind-WARNING **: 09:28:12.512: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-mime-helper:257): dbind-WARNING **: 09:28:12.532: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+ThunarThumbnailer: Failed to retrieve supported types: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.thumbnails.Thumbnailer1 was not provided by any .service files
+
+(exo-open:266): dbind-WARNING **: 09:28:14.924: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-mime-helper:268): dbind-WARNING **: 09:28:14.946: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno = Operation not permitted
+[269:269:0830/092814.994622:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:211] Check failed: . : Operation not permitted (1)
+[0830/092815.003404:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0830/092815.003474:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno = Operation not permitted
+[288:288:0830/092827.613123:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:211] Check failed: . : Operation not permitted (1)
+[0830/092827.621246:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0830/092827.621325:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno = Operation not permitted
+[304:0830/092833.036511:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:211] Check failed: . : Invalid argument (22)
+
+(exo-open:308): dbind-WARNING **: 09:28:36.021: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-mime-helper:310): dbind-WARNING **: 09:28:36.040: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-terminal:311): dbind-WARNING **: 09:28:36.066: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+*** BUG ***
+In pixman_region_append_non_o: The expression y1 < y2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_append_non_o: The expression r->x1 < r->x2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_append_non_o: The expression y1 < y2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_append_non_o: The expression r->x1 < r->x2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(xfce4-terminal:311): Gtk-WARNING **: 09:30:50.734: Could not load a pixbuf from /org/gtk/libgtk/theme/Adwaita/assets/check-symbolic.svg.
+This may indicate that pixbuf loaders or the mime database could not be found.
+
+(xfce4-appfinder:346): dbind-WARNING **: 09:33:40.543: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(ristretto:353): dbind-WARNING **: 09:33:45.461: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-sensors:359): dbind-WARNING **: 09:33:55.035: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-sensors:359): Gtk-WARNING **: 09:33:55.067: Could not load a pixbuf from /org/gtk/libgtk/theme/Adwaita/assets/bullet-symbolic.svg.
+This may indicate that pixbuf loaders or the mime database could not be found.
+*** BUG ***
+In pixman_region_append_non_o: The expression y1 < y2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_append_non_o: The expression r->x1 < r->x2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_append_non_o: The expression y1 < y2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_append_non_o: The expression r->x1 < r->x2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_append_non_o: The expression y1 < y2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region_append_non_o: The expression r->x1 < r->x2 was false
+Set a breakpoint on '_pixman_log_error' to debug
+
+
+(xfwm4:96): xfwm4-CRITICAL **: 09:37:20.067: clientMoveToMonitorByDirectionTarget: assertion 'candidate_monitors != NULL' failed
+
+(xfwm4:96): xfwm4-CRITICAL **: 09:37:20.067: clientMoveToMonitorByDirectionTarget: assertion 'candidate_monitors != NULL' failed
+
+(xfwm4:96): xfwm4-CRITICAL **: 09:37:20.067: clientMoveToMonitorByDirectionTarget: assertion 'candidate_monitors != NULL' failed
+
+(xfwm4:96): xfwm4-CRITICAL **: 09:37:20.067: clientMoveToMonitorByDirectionTarget: assertion 'candidate_monitors != NULL' failed
+
+(xfwm4:96): Gtk-WARNING **: 09:37:20.069: Could not load a pixbuf from /org/gtk/libgtk/theme/Adwaita/assets/bullet-symbolic.svg.
+This may indicate that pixbuf loaders or the mime database could not be found.
+
+(xfwm4:96): xfwm4-CRITICAL **: 09:37:25.073: clientMoveToMonitorByDirectionTarget: assertion 'candidate_monitors != NULL' failed
+
+(xfwm4:96): xfwm4-CRITICAL **: 09:37:25.073: clientMoveToMonitorByDirectionTarget: assertion 'candidate_monitors != NULL' failed
+
+(xfwm4:96): xfwm4-CRITICAL **: 09:37:25.073: clientMoveToMonitorByDirectionTarget: assertion 'candidate_monitors != NULL' failed
+
+(xfwm4:96): xfwm4-CRITICAL **: 09:37:25.073: clientMoveToMonitorByDirectionTarget: assertion 'candidate_monitors != NULL' failed
+
+(xfce4-session-logout:1523): dbind-WARNING **: 09:48:12.225: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+rdpkeybBell:
+rdpkeybBell:
+
+(xfce4-session:58): xfce4-session-WARNING **: 09:48:12.255: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(xfce4-session:58): xfce4-session-WARNING **: 09:48:12.259: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(xfce4-session:58): xfce4-session-WARNING **: 09:48:12.263: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(xfce4-session:58): Gtk-WARNING **: 09:48:12.277: Could not load a pixbuf from /org/gtk/libgtk/theme/Adwaita/assets/check-symbolic.svg.
+This may indicate that pixbuf loaders or the mime database could not be found.
+
+(wrapper-2.0:140): GLib-GObject-CRITICAL **: 09:48:14.079: ../../../gobject/gsignal.c:2685: instance '0x639879192e00' has no handler with id '57'
+rdpmouseControl: what 2
+rdpmouseDeviceOff:
+rdpkeybControl: what 2
+rdpkeybDeviceOff:
+xorgxrdpDamageDestroy:
+rdpkeybControl: what 3
+rdpkeybUnInit: drv 0x5ae744bc7920 info 0x5ae744e71b80, flags 0x0
+rdpUnregisterInputCallback: proc 0x79d177587d60
+rdpmouseControl: what 3
+rdpmouseUnInit: drv 0x5ae744bc6110 info 0x5ae744e6eaa0, flags 0x0
+rdpUnregisterInputCallback: proc 0x79d177a443a0
+rdpCloseScreen:
+xorgxrdpDownDown:
+xorgxrdpDownDown: 1
+rdpClientConDeinit:
+rdpClientConDeinit: disconnecting clientCon
+rdpClientConDisconnect:
+rdpRemoveClientConFromDev: removing clientCon 0x5ae744ec8510
+rdpClientConDeinit: deleting file /run/xrdp/sockdir/xrdp_display_10
+rdpClientConDeinit: deleting file /run/xrdp/sockdir/xrdp_disconnect_display_10
+(II) Server terminated successfully (0). Closing log file.
+
+X.Org X Server 1.21.1.11
+X Protocol Version 11, Revision 0
+Current Operating System: Linux devbox-dev1 6.8.0-79-generic #79-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 14:42:46 UTC 2025 x86_64
+Kernel command line: BOOT_IMAGE=/vmlinuz-6.8.0-79-generic root=UUID=d36f7414-beb7-45e0-900e-9ab79cdbcb2d ro console=tty0 console=ttyS0,115200 earlyprintk=ttyS0,115200 consoleblank=0 memhp_default_state=online console=tty1 console=ttyS0
+xorg-server 2:21.1.12-1ubuntu1.4 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.42.2
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(++) Log file: ".xorgxrdp.10.log", Time: Sat Aug 30 09:48:36 2025
+(++) Using config file: "/etc/X11/xrdp/xorg.conf"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+xorgxrdpSetup:
+xrdpdevSetup:
+rdpmousePlug:
+rdpkeybPlug:
+rdpIdentify:
+rdpDriverFunc: op 10
+rdpProbe:
+rdpProbe: found DRMDevice xorg.conf value [/dev/dri/renderD128]
+rdpProbe: found DRI3 xorg.conf value [1]
+rdpPreInit:
+rdpPreInit: /dev/dri/renderD128 open failed
+rdpScreenInit: virtualX 800 virtualY 600 rgbBits 8 depth 24
+rdpScreenInit: pfbMemory bytes 1920000
+rdpScreenInit: pfbMemory 0x7ab194cd4010
+rdpSimdInit: assigning yuv functions
+rdpSimdInit: cpuid ax 1 cx 0 return ax 0x00a10f11 bx 0x01040800 cx 0xfffa3203 dx 0x178bfbff
+rdpSimdInit: sse2 amd64 yuv functions assigned
+rdpClientConInit: disconnect idle session after [0] sec
+rdpClientConInit: kill disconnected [0] timeout [0] sec
+rdpClientConInit: do_touchpad_scroll_hack [0]
+rdpXvInit: depth 24
+rdpScreenInit: out
+rdpCreateScreenResources:
+rdpmousePreInit: drv 0x61fc96936110 info 0x61fc96bdeaa0, flags 0x0
+rdpmouseControl: what 0
+rdpmouseDeviceInit:
+rdpmouseCtrl:
+rdpRegisterInputCallback: type 1 proc 0x7ab1953673a0
+rdpmouseControl: what 1
+rdpmouseDeviceOn:
+rdpkeybPreInit: drv 0x61fc96937920 info 0x61fc96be1b80, flags 0x0
+rdpkeybControl: what 0
+rdpkeybDeviceInit:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpRegisterInputCallback: type 0 proc 0x7ab194eaad60
+rdpkeybControl: what 1
+rdpkeybDeviceOn:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpDeferredRandR:
+rdpResizeSession: width 1024 height 768
+  calling RRScreenSizeSet
+rdpRRScreenSetSize: width 1024 height 768 mmWidth 271 mmHeight 203
+rdpRRGetInfo:
+  screen resized to 1024x768
+  RRScreenSizeSet ok 1
+rdpResizeSession: width 1524 height 720
+  calling RRScreenSizeSet
+rdpRRScreenSetSize: width 1524 height 720 mmWidth 403 mmHeight 191
+rdpRRGetInfo:
+  screen resized to 1524x720
+  RRScreenSizeSet ok 1
+rdpClientConGotConnection:
+rdpClientConGotConnection: g_sck_accept ok new_sck 9
+rdpClientConGetConnection: idle_disconnect_timeout set to non-positive value, idle timer turned off
+rdpAddClientConToDev: adding first clientCon 0x61fc96c38510
+rdpClientConProcessMsgVersion: version 0 0 0 1
+rdpClientConProcessScreenSizeMsg: set width 1524 height 720 bpp 24
+rdpClientConAllocateSharedMemory: shmemid 32804 shmemptr 0x7ab193c0c000 bytes 4389120
+rdpClientConProcessMsgClientInput: invalidate x 0 y 0 cx 1524 cy 720
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpRRGetInfo:
+rdpClientConProcessMsgClientInfo:
+  got client info bytes 7072
+  jpeg support 0
+  offscreen support 0
+  offscreen size 0
+  offscreen entries 0
+  client can not do offscreen to offscreen blits
+  client can do new(color) cursor
+  client can not do multimon
+rdpRRSetRdpOutputs: numCrtcs 0 numOutputs 0 monitorCount 0
+rdpRRSetRdpOutputs: add output 0 left 0 top 0 width 1524 height 720
+rdpLoadLayout: keylayout 0x00000409 variant  display 10
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+fuse: device not found, try 'modprobe fuse' first
+
+(xfce4-session:1546): dbind-WARNING **: 09:48:37.161: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+_IceTransmkdir: Owner of /tmp/.ICE-unix should be set to root
+
+(xfce4-session:1546): xfce4-session-WARNING **: 09:48:37.179: No SSH authentication agent found
+
+(xfwm4:1583): dbind-WARNING **: 09:48:37.208: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+
+(xfwm4:1583): xfwm4-WARNING **: 09:48:37.320: Unsupported GL renderer (llvmpipe (LLVM 19.1.1, 256 bits)).
+
+(xfsettingsd:1597): dbind-WARNING **: 09:48:37.348: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+rdpRRGetInfo:
+
+(xfsettingsd:1597): libupower-glib-WARNING **: 09:48:37.356: Couldn't connect to proxy: Could not connect: No such file or directory
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat on
+
+(xfce4-panel:1601): dbind-WARNING **: 09:48:37.408: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(Thunar:1606): dbind-WARNING **: 09:48:37.441: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+rdpInDeferredRepeatCallback:
+rdpkeybChangeKeyboardControl:
+rdpkeybChangeKeyboardControl: autoRepeat off
+
+(xfdesktop:1612): dbind-WARNING **: 09:48:37.481: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+** (xfdesktop:1612): WARNING **: 09:48:37.600: Thumbnailer failed calling GetFlavors
+
+(xfsettingsd:1616): dbind-WARNING **: 09:48:37.617: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(xfce4-notifyd:1617): dbind-WARNING **: 09:48:37.638: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+** (xfdesktop:1612): WARNING **: 09:48:37.651: Failed to get system bus: Could not connect: No such file or directory
+
+(wrapper-2.0:1629): dbind-WARNING **: 09:48:37.652: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(wrapper-2.0:1631): dbind-WARNING **: 09:48:37.655: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+libclock-Message: 09:48:37.663: could not get proxy for org.freedesktop.login1
+
+(xfce4-panel:1601): libclock-WARNING **: 09:48:37.663: could not instantiate a sleep monitor
+
+(wrapper-2.0:1630): dbind-WARNING **: 09:48:37.664: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(wrapper-2.0:1643): dbind-WARNING **: 09:48:37.735: AT-SPI: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+(wrapper-2.0:1631): xfce4-notification-plugin-WARNING **: 09:48:37.953: Failed to look up notification icon
+
+** (wrapper-2.0:1630): WARNING **: 09:48:37.967: Binding 'XF86AudioLowerVolume' failed!
+
+** (wrapper-2.0:1630): WARNING **: 09:48:37.967: Binding 'XF86AudioRaiseVolume' failed!
+
+** (wrapper-2.0:1630): WARNING **: 09:48:37.967: Binding 'XF86AudioMute' failed!
+
+** (wrapper-2.0:1630): WARNING **: 09:48:37.967: Binding 'XF86AudioMicMute' failed!
+
+(wrapper-2.0:1630): pulseaudio-plugin-WARNING **: 09:48:37.967: Could not have grabbed volume control keys. Is another volume control application (xfce4-volumed) running?
+
+** (wrapper-2.0:1630): WARNING **: 09:48:37.967: Binding 'XF86AudioPlay' failed!
+
+** (wrapper-2.0:1630): WARNING **: 09:48:37.967: Binding 'XF86AudioStop' failed!
+
+** (wrapper-2.0:1630): WARNING **: 09:48:37.967: Binding 'XF86AudioPrev' failed!
+
+** (wrapper-2.0:1630): WARNING **: 09:48:37.967: Binding 'XF86AudioNext' failed!
+
+(wrapper-2.0:1630): pulseaudio-plugin-WARNING **: 09:48:37.967: Could not have grabbed multimedia control keys.
+
+(wrapper-2.0:1631): xfce4-notification-plugin-WARNING **: 09:48:37.971: Failed to look up notification icon
+
+(wrapper-2.0:1631): xfce4-notification-plugin-WARNING **: 09:48:37.971: Failed to look up notification icon
+
+(xfce4-session:1546): xfce4-session-WARNING **: 09:48:37.982: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(xfce4-session:1546): xfce4-session-WARNING **: 09:48:37.987: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(xfce4-session:1546): xfce4-session-WARNING **: 09:48:37.990: failed to run script: Failed to execute child process “/usr/bin/pm-is-supported” (No such file or directory)
+
+(wrapper-2.0:1631): xfce4-notification-plugin-WARNING **: 09:48:37.997: Failed to look up notification icon
+Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno = Operation not permitted
+[1657:0830/094851.837153:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:211] Check failed: . : Invalid argument (22)
+Failed to move to new namespace: PID namespaces supported, Network namespace supported, but failed: errno = Operation not permitted
+[1661:1661:0830/094905.892525:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:211] Check failed: . : Operation not permitted (1)
+[0830/094905.901204:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[0830/094905.901268:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)

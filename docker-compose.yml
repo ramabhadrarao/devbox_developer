@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  # One container per user (generate via script or duplicate block)
+  # One container per user
   devbox_dev1:
     build:
       context: .
@@ -10,13 +10,21 @@ services:
         USER: dev1
         PASSWORD: ${DEVBOX_PASSWORD_dev1}
     container_name: devbox_dev1
+    hostname: devbox-dev1
     networks:
       - devnet
-    expose:
-      - "3389"
+    ports:
+      - "33891:3389"  # RDP port mapping for dev1
     volumes:
-      - ./logs/dev1:/var/log
+      # Mount specific log directories to avoid overwriting /var/log
+      - ./logs/dev1/supervisor:/var/log/supervisor
+      - ./logs/dev1/xrdp:/var/log/xrdp
+      - ./logs/dev1/account:/var/log/account
+      # Optional: persistent home directory
+      # - ./home/dev1:/home/dev1
     restart: unless-stopped
+    environment:
+      - TZ=UTC
 
   devbox_dev2:
     build:
@@ -26,13 +34,45 @@ services:
         USER: dev2
         PASSWORD: ${DEVBOX_PASSWORD_dev2}
     container_name: devbox_dev2
+    hostname: devbox-dev2
     networks:
       - devnet
-    expose:
-      - "3389"
+    ports:
+      - "33892:3389"  # RDP port mapping for dev2
     volumes:
-      - ./logs/dev2:/var/log
+      # Mount specific log directories to avoid overwriting /var/log
+      - ./logs/dev2/supervisor:/var/log/supervisor
+      - ./logs/dev2/xrdp:/var/log/xrdp
+      - ./logs/dev2/account:/var/log/account
+      # Optional: persistent home directory
+      # - ./home/dev2:/home/dev2
     restart: unless-stopped
+    environment:
+      - TZ=UTC
+
+  devbox_dev3:
+    build:
+      context: .
+      dockerfile: Dockerfile.devbox
+      args:
+        USER: dev3
+        PASSWORD: ${DEVBOX_PASSWORD_dev3}
+    container_name: devbox_dev3
+    hostname: devbox-dev3
+    networks:
+      - devnet
+    ports:
+      - "33893:3389"  # RDP port mapping for dev3
+    volumes:
+      # Mount specific log directories to avoid overwriting /var/log
+      - ./logs/dev3/supervisor:/var/log/supervisor
+      - ./logs/dev3/xrdp:/var/log/xrdp
+      - ./logs/dev3/account:/var/log/account
+      # Optional: persistent home directory
+      # - ./home/dev3:/home/dev3
+    restart: unless-stopped
+    environment:
+      - TZ=UTC
 
 networks:
   devnet:

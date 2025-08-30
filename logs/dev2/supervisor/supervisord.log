@@ -1,0 +1,24 @@
+2025-08-30 08:43:42,137 INFO Set uid to user 0 succeeded
+2025-08-30 08:43:42,141 INFO RPC interface 'supervisor' initialized
+2025-08-30 08:43:42,141 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-08-30 08:43:42,141 INFO supervisord started with pid 1
+2025-08-30 08:43:43,143 INFO spawned: 'xrdp-sesman' with pid 26
+2025-08-30 08:43:43,145 INFO spawned: 'xrdp' with pid 27
+2025-08-30 08:43:44,146 INFO success: xrdp-sesman entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-30 08:43:44,147 INFO success: xrdp entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-30 08:54:10,872 WARN received SIGTERM indicating exit request
+2025-08-30 08:54:10,872 INFO waiting for xrdp-sesman, xrdp to die
+2025-08-30 08:54:10,874 INFO stopped: xrdp (exit status 0)
+2025-08-30 08:54:10,875 INFO stopped: xrdp-sesman (exit status 0)
+2025-08-30 08:58:59,098 INFO Set uid to user 0 succeeded
+2025-08-30 08:58:59,102 INFO RPC interface 'supervisor' initialized
+2025-08-30 08:58:59,102 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-08-30 08:58:59,102 INFO supervisord started with pid 1
+2025-08-30 08:59:00,106 INFO spawned: 'xrdp-sesman' with pid 24
+2025-08-30 08:59:00,108 INFO spawned: 'xrdp' with pid 25
+2025-08-30 08:59:01,110 INFO success: xrdp-sesman entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-30 08:59:01,110 INFO success: xrdp entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-30 10:02:01,474 WARN received SIGTERM indicating exit request
+2025-08-30 10:02:01,475 INFO waiting for xrdp-sesman, xrdp to die
+2025-08-30 10:02:01,477 INFO stopped: xrdp (exit status 0)
+2025-08-30 10:02:01,480 INFO stopped: xrdp-sesman (exit status 0)
