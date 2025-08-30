@@ -186,8 +186,8 @@ RUN echo '<?xml version="1.0" encoding="UTF-8"?>\n\
   </property>\n\
 </channel>' > /home/$USER/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 
-# Copy XFCE panel config if exists
-COPY xfce-config/xfce4-panel.xml /home/$USER/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml || true
+# Copy XFCE panel config - FIXED: removed || true as COPY doesn't support it
+COPY xfce-config/xfce4-panel.xml /home/$USER/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 
 # Disable marketplace / remote in VSCodium
 RUN mkdir -p /home/$USER/.config/VSCodium/User && \

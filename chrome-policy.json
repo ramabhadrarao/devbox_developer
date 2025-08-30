@@ -32,7 +32,9 @@
     
     "tailwindcss.com",
     "*.tailwindcss.com",
-    
+    "gitea:3000",
+    "gitea:*",
+    "http://gitea:3000/*",
     "jquery.com",
     "*.jquery.com",
     

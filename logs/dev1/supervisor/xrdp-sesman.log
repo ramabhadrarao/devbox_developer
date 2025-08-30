@@ -15,3 +15,5 @@ chansrv::main: using log file [/home/dev1/.local/share/xrdp/xrdp-chansrv.10.log]
 Another notification daemon is running, exiting
 Another notification daemon is running, exiting
 /usr/bin/startxfce4: X server already running on display :10.0
+/usr/bin/startxfce4: X server already running on display :10.0
+/usr/bin/startxfce4: X server already running on display :10.0

@@ -107,3 +107,30 @@
 2025-08-30 10:02:00,805 INFO waiting for xrdp-sesman, xrdp to die
 2025-08-30 10:02:01,807 INFO stopped: xrdp (exit status 0)
 2025-08-30 10:02:02,809 INFO stopped: xrdp-sesman (exit status 0)
+2025-08-30 10:15:34,383 INFO Set uid to user 0 succeeded
+2025-08-30 10:15:34,386 INFO RPC interface 'supervisor' initialized
+2025-08-30 10:15:34,386 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-08-30 10:15:34,387 INFO supervisord started with pid 1
+2025-08-30 10:15:35,389 INFO spawned: 'xrdp-sesman' with pid 24
+2025-08-30 10:15:35,391 INFO spawned: 'xrdp' with pid 25
+2025-08-30 10:15:36,393 INFO success: xrdp-sesman entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-30 10:15:36,393 INFO success: xrdp entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-30 10:17:47,097 INFO reaped unknown pid 137 (exit status 0)
+2025-08-30 10:17:47,097 INFO reaped unknown pid 139 (exit status 0)
+2025-08-30 10:17:47,097 INFO reaped unknown pid 140 (exit status 0)
+2025-08-30 10:17:47,097 INFO reaped unknown pid 291 (exit status 0)
+2025-08-30 10:18:11,933 INFO reaped unknown pid 501 (exit status 0)
+2025-08-30 10:18:11,934 INFO reaped unknown pid 502 (exit status 0)
+2025-08-30 10:21:18,556 WARN received SIGTERM indicating exit request
+2025-08-30 10:21:18,556 INFO waiting for xrdp-sesman, xrdp to die
+2025-08-30 10:21:19,558 INFO stopped: xrdp (exit status 0)
+2025-08-30 10:21:20,560 INFO stopped: xrdp-sesman (exit status 0)
+2025-08-30 10:39:36,120 INFO Set uid to user 0 succeeded
+2025-08-30 10:39:36,124 INFO RPC interface 'supervisor' initialized
+2025-08-30 10:39:36,124 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-08-30 10:39:36,124 INFO supervisord started with pid 1
+2025-08-30 10:39:37,127 INFO spawned: 'xrdp-sesman' with pid 24
+2025-08-30 10:39:37,130 INFO spawned: 'xrdp' with pid 25
+2025-08-30 10:39:38,131 INFO success: xrdp-sesman entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-30 10:39:38,132 INFO success: xrdp entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-30 10:40:42,955 INFO reaped unknown pid 118 (exit status 0)

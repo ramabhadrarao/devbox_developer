@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   # One container per user
   devbox_dev1:
